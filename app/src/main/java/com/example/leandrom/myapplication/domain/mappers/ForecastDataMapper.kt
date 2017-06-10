@@ -34,5 +34,5 @@ class ForecastDataMapper{
         return df.format(date)
     }
 
-    private fun generateIconUrl(iconCode: String): String = "http://openweathermap.org/img/w/$iconCode.png0000000000000000000000"
+    private fun generateIconUrl(iconCode: String): String = "http://openweathermap.org/img/w/$iconCode.png"
 }
