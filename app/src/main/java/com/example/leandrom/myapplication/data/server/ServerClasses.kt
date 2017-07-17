@@ -1,9 +1,9 @@
-package com.example.leandrom.myapplication.data
+package com.example.leandrom.myapplication.data.server
 
 /**
  * Created by leandrom on 20-May-17.
  */
-data class ForecastResult(val city:City, val list: List<Forecast>)
+data class ForecastResult(val city: City, val list: List<Forecast>)
 
 data class City(val id: Long, val name: String, val coord: Coordinates, val country: String, val population: Int)
 
