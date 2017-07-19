@@ -2,12 +2,15 @@ package com.example.leandrom.myapplication.data.server
 
 import com.example.leandrom.myapplication.data.db.ForecastDb
 import com.example.leandrom.myapplication.domain.datasource.ForecastDataSource
+import com.example.leandrom.myapplication.domain.model.Forecast
 import com.example.leandrom.myapplication.domain.model.ForecastList
 
 /**
  * Created by madnotdead on 7/15/17.
  */
 class ForecastServer(val dataMapper: ServerDataMapper = ServerDataMapper(), val forecastDb: ForecastDb = ForecastDb()) : ForecastDataSource {
+
+    override fun requestDayForecast(id: Long) = throw UnsupportedOperationException()
 
     override fun requestForecastByZipCode(zipCode: Long, date: Long): ForecastList? {
 
