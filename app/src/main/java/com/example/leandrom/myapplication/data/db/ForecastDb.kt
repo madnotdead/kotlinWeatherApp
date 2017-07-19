@@ -17,7 +17,7 @@ class ForecastDb (
 
     override fun requestDayForecast(id: Long): Forecast? = forecastDbHelper.use {
         val forecast = select(DayForecastTable.NAME).byId(id)
-                .parseOpt{ DayForecast(HashMap(id))}
+                .parseOpt{ DayForecast(HashMap(it))}
 
         if(forecast != null) dataMapper.convertDayToDomain(forecast) else null
 
